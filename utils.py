@@ -199,8 +199,8 @@ def generate_pie_chart(data: pd.DataFrame) -> plt.Figure:
     r_mon = round(data[data['thermostat'] == 'red']['cost_to_fragile'].sum().item(), 2)
     labels = {
         "green": "No Impact",
-        "yellow": f"Medium Impact (${y_mon})",
-        "red": f"High Impact (${r_mon})"
+        "yellow": f"Medium Impact (-${y_mon})",
+        "red": f"High Impact (-${r_mon})"
     }
     colors = {
         "green": "green",
